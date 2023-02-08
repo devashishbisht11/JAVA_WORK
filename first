@@ -1,0 +1,58 @@
+A) First program- Hello World
+Code-
+class Main
+{
+    public static void main (String args[])
+    {
+        //Code
+        System.out.println("Hello World");
+    }
+}
+Output- Hello World
+
+B) Calculate- add, subtract, multiply, divide
+Code-
+class Main
+{
+    public static void main (String args[])
+    {
+        int a=10;
+        int b=5;
+        int add, sub, mul, div;
+        add=a+b;
+        sub=a-b;
+        mul=a*b;
+        div=a/b;
+        System.out.println("Hello World");
+        System.out.println(add);
+        System.out.println(sub);
+        System.out.println(mul);
+        System.out.println(div);
+    }
+}
+Output- Hello World
+15
+5
+50
+2
+
+C) Calculate- rectangle, square, circle
+Code-
+class Main
+{
+    public static void main (String args[])
+    {
+        int a=10;
+        int b=5;
+        int s=20;
+        int arear, areas;
+        arear=a*b;
+        areas=s*s;
+        System.out.println("Hello World");
+        System.out.println(arear);
+        System.out.println(areas);
+    }
+}
+Output- Hello World
+50
+400
