@@ -1,0 +1,77 @@
+/* Q1. WAP to take input as a command line argument. Your name, university rollno, coure and semester 
+is the information required to be displayed in the below format.
+*/
+
+public class Studentdetail
+{
+	public static void main (String []args)
+	{
+		String name;
+		String urollno;
+		String course;
+		int sem;
+		
+		name = args[0];
+		urollno = args[1];
+		course = args[2];
+		sem = Integer.parseInt(args[3]);
+		System.out.println("Name:                "+name);
+		System.out.println("University Rollno:   "+urollno);
+		System.out.println("Course:              "+course);
+		System.out.println("Semester:            "+sem);
+	}
+}
+
+/* 
+Q2. Using the switch statement write a menu driven program
+to find the maturity amount of a bank deposit. The user will be given two deposit: 
+
+1. Term Deposit-
+Accept principal(p), rate of intrest(r), and time preiod in years(n). Calculate an output the maturity amount a using formula: a = p[1+r/100]*n
+
+2. Recurring Deposit-
+Accept monthly installment(p), rate of intrest(r), and time period in months(n). Calculate the maturity amount a using the formula: a = p*n+p*n(n+1)/2*r/100*1/12
+
+For an incorrect option an appropriate error message should get displayed.
+*/
+import java.util.Scanner;
+public class Bank
+{
+	public static void main (String []args)
+	{
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Enter '1' to calculate Term Deposit");
+		System.out.println("Enter '2' to calculate Recurring Deposit");
+		System.out.println("Enter your choice");
+
+		int option = in.nextInt();
+		float p, r, amount1, amount2;
+		int n;
+		switch(option)
+		{
+			case 1:
+				System.out.println("Enter principle amount");
+				p = in.nextFloat();
+				System.out.println("Enter rate of intrest");
+				r = in.nextFloat();
+				System.out.println("Enter time period");
+				n = in.nextInt();
+				amount1 = (p*(1+r/100)*n);
+				System.out.println("Term Deposit is: "+amount1);
+			break;
+			case 2:
+				System.out.println("Enter principle amount");
+				p = in.nextFloat();
+				System.out.println("Enter rate of intrest");
+				r = in.nextFloat();
+				System.out.println("Enter time period");
+				n = in.nextInt();
+				amount2 = (p*n + (p*n*(n+1)/2) * r/100 * 1/12);
+				System.out.println("Recurring Deposit is: "+amount2);
+			break;
+			default: 
+				System.out.println("Error!");
+		}
+	}
+}
